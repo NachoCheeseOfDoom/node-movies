@@ -26,7 +26,7 @@ const create = async (req: Request, res: Response) => {
   const { title, year } = req.body;
   if (title === '' || year === '' || !title || !year) {
     res.status(400).json({
-      message: "Title and year cannot be empty"
+      message: "Must have title and year"
     });
     return;
   }
@@ -58,7 +58,7 @@ const update = async (req: Request, res: Response) => {
   const { title, year } = req.body;
   if (title === '' || year === '' || !title || !year) {
     res.status(400).json({
-      message: "Title and year cannot be empty"
+      message: "Must have title and year"
     });
     return;
   }
